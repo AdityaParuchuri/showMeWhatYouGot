@@ -1,12 +1,12 @@
 // TMDb API Configuration
 // TODO: Replace 'YOUR_TMDB_API_KEY' with your actual TMDb API key
-const TMDB_API_KEY = 'c1e4f8e11898946a61ff994c1703105c';
+const TMDB_API_KEY = 'YOUR_TMDB_API_KEY';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 // OpenRouter API Configuration
 // TODO: Replace 'YOUR_OPENROUTER_API_KEY' with your actual OpenRouter API key
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = 'YOUR_OPENROUTER_API_KEY';
 const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
 // Using a free model - you can change this to other free models like 'mistralai/mistral-7b-instruct'
 const OPENROUTER_MODEL = 'mistralai/mistral-7b-instruct';
