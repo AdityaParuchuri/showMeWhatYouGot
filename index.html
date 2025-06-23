@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowMeWhatYouGot! - Movie & TV Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="images/your-giant-head-artwork.png" alt="Giant Head" class="header-icon"> ShowMeWhatYouGot!</h1>
+            <p>Discover your next favorite entertainment across the multiverse</p>
+        </header>
+
+        <main>
+            <!-- Natural Language Input Section -->
+            <section class="nlp-section">
+                <h2>Tell Me What You Want</h2>
+                
+                <div class="nlp-input-container">
+                    <textarea 
+                        id="nlpInput" 
+                        placeholder="e.g., 'I want a psychological thriller set in space' or 'A romantic drama with a happy ending'"
+                        rows="3"
+                    ></textarea>
+                    <button id="nlpSubmitBtn" class="nlp-submit-btn">
+                        ShowMeWhatYouGot!
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p>Finding the perfect recommendations for you...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <div class="results-header">
+                    <h2>Your Recommendations</h2>
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="movies">
+                            <i class="fas fa-film"></i> Movies
+                        </button>
+                        <button class="tab-btn" data-tab="tvshows">
+                            <i class="fas fa-tv"></i> TV Shows
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Movies Tab -->
+                <div id="moviesTab" class="tab-content active">
+                    <div id="moviesResults" class="results-grid">
+                        <!-- Movie results will be populated here -->
+                    </div>
+                </div>
+
+                <!-- TV Shows Tab -->
+                <div id="tvshowsTab" class="tab-content">
+                    <div id="tvshowsResults" class="results-grid">
+                        <!-- TV show results will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error State -->
+            <div id="errorState" class="error-state hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Oops! Something went wrong</h3>
+                <p id="errorMessage">Unable to fetch recommendations. Please try again.</p>
+                <button class="retry-btn" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://www.themoviedb.org/" target="_blank">TMDb</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
